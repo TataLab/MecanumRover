@@ -13,7 +13,7 @@ find_package(catkin REQUIRED COMPONENTS
   move_base
   rviz
   tf
-  urg_node
+  
 )
 
 ## System dependencies are found with CMake's conventions
