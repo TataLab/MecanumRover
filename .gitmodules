@@ -1,0 +1,3 @@
+[submodule "src/hmk"]
+	path = src/hmk
+	url = https://github.com/lukeinator42/hector_mapping_kinect
