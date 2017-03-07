@@ -1,3 +1,15 @@
 [submodule "src/hmk"]
 	path = src/hmk
 	url = https://github.com/lukeinator42/hector_mapping_kinect
+[submodule "src/hector_mapping_kinect"]
+	path = src/hector_mapping_kinect
+	url = https://github.com/lukeinator42/hector_mapping_kinect.git
+[submodule "src/openni_camera"]
+	path = src/openni_camera
+	url = https://github.com/ros-drivers/openni_camera
+[submodule "src/openni_launch"]
+	path = src/openni_launch
+	url = https://github.com/ros-drivers/openni_launch
+[submodule "src/rosserial"]
+	path = src/rosserial
+	url = https://github.com/ros-drivers/rosserial.git
