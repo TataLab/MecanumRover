@@ -32,9 +32,9 @@ void get_velocity(){
 //PID function
 void doPID(float *setPoints, float *velocity, byte *power, float *Ierror, float *preverror){ 
     const int MotorCount = 4 ;
-    const float KP = 1.00f;
-    const float KI = 0.01f;
-    const float KD = 0.005f;
+    const float KP = 0.80f;
+    const float KI = 0.00f;
+    const float KD = 0.00f;
     float error;
     float derror;
     float p;
@@ -107,16 +107,12 @@ void setup()
 
 void loop()
 {
-
+delay(50); 
   nodeHandle.spinOnce();
 
-	//delay(5); 
+	
   get_velocity();
   doPID( setPoints, vel, power,Ierror,preverror);
-  frontLeftMotor->run(FORWARD);
-  frontRightMotor->run(BACKWARD);
-  rearLeftMotor->run(FORWARD);
-  rearRightMotor->run(BACKWARD);
   frontLeftMotor->setSpeed(power[0]);
   frontRightMotor->setSpeed(power[3]);
   rearLeftMotor->setSpeed(power[1]); 
