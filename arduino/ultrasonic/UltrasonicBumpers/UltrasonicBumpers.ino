@@ -1,10 +1,11 @@
 /*
- * rosserial Publisher Example
- * Prints "hello world!"
+monitors rangefinders for close things and publishes a warning if something
+is too close
  */
 
 #include <ros.h>
 #include <std_msgs/Bool.h>
+#include <std_msgs/Float32.h>
 
 //range finder setup stuff//
 
@@ -31,12 +32,16 @@ ros::NodeHandle  nh;
 std_msgs::Bool bumper_msg;
 ros::Publisher bumper("bumper", &bumper_msg);
 
+std_msgs::Float32 bumperDistance_msg;
+ros::Publisher bumperDistance("bumperDistance", &bumperDistance_msg);
 
 
 void setup()
 {
   nh.initNode();
   nh.advertise(bumper);
+  nh.advertise(bumperDistance);
+
   
  pinMode(trigPin1, OUTPUT);
  pinMode(echoPin1, INPUT);
@@ -65,6 +70,8 @@ void loop()
       bumper.publish( &bumper_msg );
   }
   
+  bumperDistance_msg.data = distance1;
+  bumperDistance.publish( &bumperDistance_msg );
   
 
   nh.spinOnce();
@@ -87,12 +94,14 @@ float pollsensors(int echoPin, int trigPin) {
  //Calculate the distance (in cm) based on the speed of sound.
  distance = duration/58.2;
  
+ /*
  if (distance > maximumRange){
    distance = maximumRange;
  }
  else if(distance < minimumRange){
    distance = minimumRange;
  }
+ */
  
 return distance;
  
