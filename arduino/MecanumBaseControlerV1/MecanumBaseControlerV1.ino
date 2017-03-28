@@ -4,6 +4,8 @@
 #include <ros.h>
 #include <geometry_msgs/Twist.h>
 #include <geometry_msgs/Vector3.h>
+#include <tf/transform_broadcaster.h>
+#include <nav_msgs/Odometry.h>
 #include <Wire.h>
 #include <Adafruit_MotorShield.h>
 
@@ -18,16 +20,6 @@ float setPoints[4] = {0,0,0,0};
 float magnitude =1;
 float angle = 3.14/4;
 EncoderComm EC;
-
-//function to retrieve velocity
-void get_velocity(){
-  EC.requestMsg('g');
-  for(int i=0;i<4;i++) {
-        vel[i] = EC.getVelocity(i);//Get the volocity from the EC after doing the requestMsg
-        //Serial.print(vel[i]);
-        revs[i] = EC.getRev(i);//Get the Rev from the EC after doing the requestMsg
-   }  
-}
 
 //PID function
 void doPID(float *setPoints, float *velocity, byte *power, float *Ierror, float *preverror){ 
@@ -57,13 +49,14 @@ void twistMessageCb(const geometry_msgs::Twist& msg);
 
 //*******setup for ROS*********//
 ros::NodeHandle  nodeHandle;
-
+ros::init(argc,arv, "odometry_publisher");
 
 // subscriber callback object for twist message
 // the callback function (2nd parameter) is regestered in setup()
 // whenever a twist message is published to the "miniq/cmd_vel" topic on this node, the callback 
 // function (twistMessageCb) is called
 ros::Subscriber<geometry_msgs::Twist> subscriber("/mecanum/cmd_vel", &twistMessageCb);
+ros::Publisher odom_pub = n.advertise<nav_msgs::Odometry>("odoom",50);
 //*******done setting up ROS ************//
 
 
@@ -87,28 +80,41 @@ float WHEEL_RADIUS = 0.05;  //wheel radius in m
 float MAX_VELOCITY_RADS = 3.7 * 2 * 3.1415; //in radians per second;  3.7 rotations per second is the observed max angular rate of the mecanum wheels
 float MAX_VELOCITY_METRES = MAX_VELOCITY_RADS * WHEEL_RADIUS; //in radians per second;  3.7 rotations per second is the observed max angular rate of the mecanum wheels
 
+//function to retrieve velocity
+void get_velocity(){
+  EC.requestMsg('g');
+  for(int i=0;i<4;i++) {
+        vel[i] = EC.getVelocity(i);//Get the volocity from the EC after doing the requestMsg
+        //Serial.print(vel[i]);
+        revs[i] = EC.getRev(i);//Get the Rev from the EC after doing the requestMsg
+   }
+   //report odometry
+  frontLeftMotor->setSpeed(power[0]);
+  frontRightMotor->setSpeed(power[3]);
+  rearLeftMotor->setSpeed(power[1]); 
+  rearRightMotor->setSpeed(power[2]);
+  float linearx = (vel[0]+vel[3]+vel[1]+vel[2])*(WHEEL_RADIUS/4);
+  float lineary = (-vel[0]+vel[3]+vel[1]+vel[2])*(WHEEL_RADIUS/4);  
+  float angularz = (-vel[0]+vel[3]-vel[1]+vel[2])*(WHEEL_RADIUS/(4*(WHEEL_SEPARATION_WIDTH + WHEEL_SEPARATION_LENGTH)));
+  
+}
+
 void setup()
 { 
   EC.requestMsg('r');
 	nodeHandle.initNode();
-
+  nodeHandle.advertise(chatter); //for mec_od
 	// registers callback function on "mecanum/cmd_vel" topic via subscriber object
 	nodeHandle.subscribe(subscriber);
 
   //initialize the motor shield
   motorShield.begin();
-
-//  for(int i = 0; i<4; i++){
-//    setPoints[i]=1.0;        
-//  }
-
-       
 }
 
 void loop()
 {
 
-  nodeHandle.spinOnce();
+	nodeHandle.spinOnce();
 
 	//delay(5); 
   get_velocity();
