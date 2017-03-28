@@ -27,7 +27,7 @@ int main(int argc, char **argv){
 		msg.linear.x=1.0;
 		msg.linear.y = 0.0;
 		msg.angular.z=0.0;
-		double speed=1;
+		double speed=1.0;
 	
 		//publish the first twist message
 		pub.publish(msg);
@@ -36,8 +36,8 @@ int main(int argc, char **argv){
 		{
 			for(int i=0;i<100;i++)
 			{
-				msg.linear.x=speed*cos((3.14159/100)*i);
-				msg.linear.y=speed*sin((3.14159/100)*i);
+				msg.linear.x=speed*cos((2*3.14159/100)*i);
+				msg.linear.y=speed*sin((2*3.14159/100)*i);
 				pub.publish(msg);
 				rate.sleep();
 			}
