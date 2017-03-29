@@ -4,6 +4,8 @@
 #include <ros.h>
 #include <geometry_msgs/Twist.h>
 #include <geometry_msgs/Vector3.h>
+#include <nav_msgs/Odometry.h>
+#include <ros/time.h>
 #include <Wire.h>
 #include <Adafruit_MotorShield.h>
 
@@ -64,6 +66,10 @@ ros::NodeHandle  nodeHandle;
 // whenever a twist message is published to the "miniq/cmd_vel" topic on this node, the callback 
 // function (twistMessageCb) is called
 ros::Subscriber<geometry_msgs::Twist> subscriber("/mecanum/cmd_vel", &twistMessageCb);
+
+nav_msgs::Odometry* odom;
+ros::Publisher odom_pub("/odom",odom); 
+
 //*******done setting up ROS ************//
 
 
@@ -87,6 +93,9 @@ float WHEEL_RADIUS = 0.05;  //wheel radius in m
 float MAX_VELOCITY_RADS = 3.7 * 2 * 3.1415; //in radians per second;  3.7 rotations per second is the observed max angular rate of the mecanum wheels
 float MAX_VELOCITY_METRES = MAX_VELOCITY_RADS * WHEEL_RADIUS; //in radians per second;  3.7 rotations per second is the observed max angular rate of the mecanum wheels
 
+unsigned long timeStamp;
+float pose[3];
+
 void setup()
 { 
   EC.requestMsg('r');
@@ -94,7 +103,10 @@ void setup()
 
   // registers callback function on "mecanum/cmd_vel" topic via subscriber object
   nodeHandle.subscribe(subscriber);
-
+  nodeHandle.advertise(odom_pub);
+  
+  
+  
   //initialize the motor shield
   motorShield.begin();
 
@@ -102,6 +114,8 @@ void setup()
 //    setPoints[i]=1.0;        
 //  }
 
+
+  timeStamp=micros();
        
 }
 
@@ -112,7 +126,8 @@ delay(50);
 
   
   get_velocity();
-  doPID( setPoints, vel, power,Ierror,preverror);
+  odomMessage();
+  //doPID( setPoints, vel, power,Ierror,preverror);
   frontLeftMotor->setSpeed(power[0]);
   frontRightMotor->setSpeed(power[3]);
   rearLeftMotor->setSpeed(power[1]); 
