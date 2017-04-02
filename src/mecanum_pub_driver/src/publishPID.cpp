@@ -29,21 +29,18 @@ int main(int argc, char **argv){
 	
 		while(1)
 		{
-			for(int i=0;i<100;i++)
-			{
-				cout << "Enter the proportional float: ";
-				cin >> msg.linear.x;
-				cout << "Enter the integral float: ";
-				cin >> msg.linear.y;
-				cout << "Enter the derivative float: ";
-				cin >> msg.angular.z;
-				
-				msg.linear.x=proportion;
-				msg.linear.y=integral;
-				msg.angular.z=derivative;
-				pub.publish(msg);
-				rate.sleep();
-			}
+			cout << "Enter the proportional float: ";
+			cin >> proportion;
+			cout << "Enter the integral float: ";
+			cin >> integral;
+			cout << "Enter the derivative float: ";
+			cin >> derivative;
+			msg.linear.x=proportion;
+			msg.linear.y=integral;
+			msg.angular.z=derivative;
+			
+			pub.publish(msg);
+			rate.sleep();
 		}
 	}
 }
