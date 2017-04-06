@@ -12,7 +12,7 @@ int main(int argc, char **argv){
 	ros::NodeHandle nh;
 	
 	//create a publisher and tell it to publish messages on the miniq/cmd_vel topic with a queue size of 100
-	ros::Publisher pub=nh.advertise<geometry_msgs::Twist>("mecanum/cmd_vel",100);
+	ros::Publisher pub=nh.advertise<geometry_msgs::Twist>("/cmd_vel",100);
 
 
 	//set the loop rate of the publisher to 10hz
