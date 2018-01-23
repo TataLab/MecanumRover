@@ -1,2 +1,2 @@
-example
--DCATKIN_DEVEL_PREFIX=/home/pi/MecanumRover/devel -DCMAKE_INSTALL_PREFIX=/home/pi/MecanumRover/install -G Unix Makefiles
+example:face_detect
+-DCATKIN_DEVEL_PREFIX=/home/austin/Documents/MecanumRover/devel -DCMAKE_INSTALL_PREFIX=/home/austin/Documents/MecanumRover/install -G Unix Makefiles
