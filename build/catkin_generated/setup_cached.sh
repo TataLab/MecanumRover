@@ -7,9 +7,7 @@
 # new environment variables
 
 # modified environment variables
-export CMAKE_PREFIX_PATH="/home/pi/MecanumRover/devel:$CMAKE_PREFIX_PATH"
-export LD_LIBRARY_PATH="/home/pi/MecanumRover/devel/lib:$LD_LIBRARY_PATH"
-export PKG_CONFIG_PATH="/home/pi/MecanumRover/devel/lib/pkgconfig:$PKG_CONFIG_PATH"
-export PWD="/home/pi/MecanumRover/build"
-export ROSLISP_PACKAGE_DIRECTORIES="/home/pi/MecanumRover/devel/share/common-lisp"
-export ROS_PACKAGE_PATH="/home/pi/MecanumRover/src:$ROS_PACKAGE_PATH"
+export CMAKE_PREFIX_PATH="/home/liamm/MecanumRover/devel:$CMAKE_PREFIX_PATH"
+export PWD="/home/liamm/MecanumRover/build"
+export ROSLISP_PACKAGE_DIRECTORIES="/home/liamm/MecanumRover/devel/share/common-lisp"
+export ROS_PACKAGE_PATH="/home/liamm/MecanumRover/src:$ROS_PACKAGE_PATH"

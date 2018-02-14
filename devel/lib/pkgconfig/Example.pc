@@ -1,8 +1,0 @@
-prefix=/home/pi/MecanumRover/devel
-
-Name: Example
-Description: Description of Example
-Version: 0.0.0
-Cflags: 
-Libs: -L/home/pi/MecanumRover/devel/lib 
-Requires: 

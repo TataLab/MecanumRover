@@ -1,8 +1,8 @@
-prefix=/home/pi/MecanumRover/install
+prefix=/home/liamm/MecanumRover/install
 
 Name: example
 Description: Description of example
 Version: 0.0.0
 Cflags: 
-Libs: -L/home/pi/MecanumRover/install/lib 
+Libs: -L/home/liamm/MecanumRover/install/lib 
 Requires: 

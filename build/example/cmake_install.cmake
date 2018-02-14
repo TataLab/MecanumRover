@@ -1,8 +1,8 @@
-# Install script for directory: /home/pi/MecanumRover/src/example
+# Install script for directory: /home/liamm/MecanumRover/src/example
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/pi/MecanumRover/install")
+  set(CMAKE_INSTALL_PREFIX "/home/liamm/MecanumRover/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -33,17 +33,17 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/pi/MecanumRover/build/example/catkin_generated/installspace/example.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/liamm/MecanumRover/build/example/catkin_generated/installspace/example.pc")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/example/cmake" TYPE FILE FILES
-    "/home/pi/MecanumRover/build/example/catkin_generated/installspace/exampleConfig.cmake"
-    "/home/pi/MecanumRover/build/example/catkin_generated/installspace/exampleConfig-version.cmake"
+    "/home/liamm/MecanumRover/build/example/catkin_generated/installspace/exampleConfig.cmake"
+    "/home/liamm/MecanumRover/build/example/catkin_generated/installspace/exampleConfig-version.cmake"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/example" TYPE FILE FILES "/home/pi/MecanumRover/src/example/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/example" TYPE FILE FILES "/home/liamm/MecanumRover/src/example/package.xml")
 endif()
 

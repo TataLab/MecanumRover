@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/pi/MecanumRover/src
+CMAKE_SOURCE_DIR = /home/liamm/MecanumRover/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/pi/MecanumRover/build
+CMAKE_BINARY_DIR = /home/liamm/MecanumRover/build
 
 # Utility rule file for std_msgs_generate_messages_lisp.
 
@@ -63,10 +63,10 @@ example/CMakeFiles/std_msgs_generate_messages_lisp.dir/build: std_msgs_generate_
 .PHONY : example/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
 
 example/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean:
-	cd /home/pi/MecanumRover/build/example && $(CMAKE_COMMAND) -P CMakeFiles/std_msgs_generate_messages_lisp.dir/cmake_clean.cmake
+	cd /home/liamm/MecanumRover/build/example && $(CMAKE_COMMAND) -P CMakeFiles/std_msgs_generate_messages_lisp.dir/cmake_clean.cmake
 .PHONY : example/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean
 
 example/CMakeFiles/std_msgs_generate_messages_lisp.dir/depend:
-	cd /home/pi/MecanumRover/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/pi/MecanumRover/src /home/pi/MecanumRover/src/example /home/pi/MecanumRover/build /home/pi/MecanumRover/build/example /home/pi/MecanumRover/build/example/CMakeFiles/std_msgs_generate_messages_lisp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/liamm/MecanumRover/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/liamm/MecanumRover/src /home/liamm/MecanumRover/src/example /home/liamm/MecanumRover/build /home/liamm/MecanumRover/build/example /home/liamm/MecanumRover/build/example/CMakeFiles/std_msgs_generate_messages_lisp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : example/CMakeFiles/std_msgs_generate_messages_lisp.dir/depend
 
