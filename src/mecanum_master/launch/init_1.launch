@@ -1,0 +1,8 @@
+<!-- init phase 1: motor control -->
+<launch>
+	<node pkg="mecanum_base"
+		  type="mecanum_base"
+		  name="mecanum_base"
+		  output="screen"
+	/>
+</launch>

@@ -1,0 +1,4 @@
+<!-- init phase 4: navigation -->
+<launch>
+  <include file="$(find mecanum_navigation)/launch nav.launch"/>
+</launch>
