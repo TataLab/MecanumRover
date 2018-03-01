@@ -1,3 +1,5 @@
+#!/bin/sh
+
 #script for launching terminal in places
 #disables write acess (only output)
 
