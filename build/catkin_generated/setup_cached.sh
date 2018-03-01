@@ -7,7 +7,4 @@
 # new environment variables
 
 # modified environment variables
-export CMAKE_PREFIX_PATH="/home/liamm/MecanumRover/devel:$CMAKE_PREFIX_PATH"
 export PWD="/home/liamm/MecanumRover/build"
-export ROSLISP_PACKAGE_DIRECTORIES="/home/liamm/MecanumRover/devel/share/common-lisp"
-export ROS_PACKAGE_PATH="/home/liamm/MecanumRover/src:$ROS_PACKAGE_PATH"

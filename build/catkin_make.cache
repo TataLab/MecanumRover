@@ -1,2 +1,2 @@
-example:face_detect:mecanum_master
+example:face_detect:mecanum_master:teleop_control:teleop_twist_keyboard
 -DCATKIN_DEVEL_PREFIX=/home/liamm/MecanumRover/devel -DCMAKE_INSTALL_PREFIX=/home/liamm/MecanumRover/install -G Unix Makefiles
