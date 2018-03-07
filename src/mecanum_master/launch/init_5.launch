@@ -1,0 +1,4 @@
+<!-- init teleop -->
+<launch>
+  <include file="$(find teleop_control)/teleop.launch"/>
+</launch>
