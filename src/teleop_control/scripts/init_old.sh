@@ -1,1 +1,0 @@
-rosrun turtlesim turtlesim_node

@@ -1,3 +1,6 @@
 <launch>
-<node name="teleop" pkg="teleop_control" type="start_teleop.sh"/>
+<node name="teleop_input" pkg="teleop_control" type="init_1.sh" launch-prefix="xterm -e" />
+
+<node name="teleop_output" pkg="teleop_control" type="init_2.sh" launch-prefix="xterm -e" />
+
 </launch>

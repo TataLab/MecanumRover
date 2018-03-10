@@ -353,6 +353,24 @@ clean: mecanum_master/CMakeFiles/_catkin_empty_exported_target.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Directory level rules for directory motor_control
+
+# Convenience name for "all" pass in the directory.
+motor_control/all:
+
+.PHONY : motor_control/all
+
+# Convenience name for "clean" pass in the directory.
+motor_control/clean:
+
+.PHONY : motor_control/clean
+
+# Convenience name for "preinstall" pass in the directory.
+motor_control/preinstall:
+
+.PHONY : motor_control/preinstall
+
+#=============================================================================
 # Directory level rules for directory teleop_control
 
 # Convenience name for "all" pass in the directory.
@@ -369,24 +387,6 @@ teleop_control/clean:
 teleop_control/preinstall:
 
 .PHONY : teleop_control/preinstall
-
-#=============================================================================
-# Directory level rules for directory teleop_twist_keyboard
-
-# Convenience name for "all" pass in the directory.
-teleop_twist_keyboard/all:
-
-.PHONY : teleop_twist_keyboard/all
-
-# Convenience name for "clean" pass in the directory.
-teleop_twist_keyboard/clean:
-
-.PHONY : teleop_twist_keyboard/clean
-
-# Convenience name for "preinstall" pass in the directory.
-teleop_twist_keyboard/preinstall:
-
-.PHONY : teleop_twist_keyboard/preinstall
 
 #=============================================================================
 # Directory level rules for directory example

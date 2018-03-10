@@ -328,6 +328,12 @@ mecanum_master_SOURCE_DIR:STATIC=/home/liamm/MecanumRover/src/mecanum_master
 //The directory containing a CMake configuration file for message_runtime.
 message_runtime_DIR:PATH=/opt/ros/kinetic/share/message_runtime/cmake
 
+//Value Computed by CMake
+motor_control_BINARY_DIR:STATIC=/home/liamm/MecanumRover/build/motor_control
+
+//Value Computed by CMake
+motor_control_SOURCE_DIR:STATIC=/home/liamm/MecanumRover/src/motor_control
+
 //The directory containing a CMake configuration file for rosconsole.
 rosconsole_DIR:PATH=/opt/ros/kinetic/share/rosconsole/cmake
 

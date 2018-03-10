@@ -118,8 +118,8 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/liamm/MecanumRover/build/gtest/cmake_install.cmake")
   include("/home/liamm/MecanumRover/build/mecanum_master/cmake_install.cmake")
+  include("/home/liamm/MecanumRover/build/motor_control/cmake_install.cmake")
   include("/home/liamm/MecanumRover/build/teleop_control/cmake_install.cmake")
-  include("/home/liamm/MecanumRover/build/teleop_twist_keyboard/cmake_install.cmake")
   include("/home/liamm/MecanumRover/build/example/cmake_install.cmake")
   include("/home/liamm/MecanumRover/build/face_detect/cmake_install.cmake")
 

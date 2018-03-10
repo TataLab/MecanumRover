@@ -1,4 +1,0 @@
-<!-- init phase 3: mapping -->
-<launch>
-  <include file="$(find mecanum_mapping)/launch start.launch"/>
-</launch>
