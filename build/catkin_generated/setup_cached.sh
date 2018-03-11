@@ -7,10 +7,4 @@
 # new environment variables
 
 # modified environment variables
-export CMAKE_PREFIX_PATH="/home/liamm/MecanumRover/devel:$CMAKE_PREFIX_PATH"
-export LD_LIBRARY_PATH="/home/liamm/MecanumRover/devel/lib:$LD_LIBRARY_PATH"
-export PATH="/opt/ros/kinetic/bin:/home/liamm/anaconda3/bin:/home/liamm/bin:/home/liamm/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin"
-export PKG_CONFIG_PATH="/home/liamm/MecanumRover/devel/lib/pkgconfig:$PKG_CONFIG_PATH"
 export PWD="/home/liamm/MecanumRover/build"
-export ROSLISP_PACKAGE_DIRECTORIES="/home/liamm/MecanumRover/devel/share/common-lisp"
-export ROS_PACKAGE_PATH="/home/liamm/MecanumRover/src:$ROS_PACKAGE_PATH"

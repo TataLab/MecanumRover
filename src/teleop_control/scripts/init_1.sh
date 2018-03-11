@@ -1,3 +1,3 @@
 #!/bin/sh
 
-rosrun turtlesim turtle_teleop_key
+roslaunch turtlebot_teleop keyboard_teleop.launch
