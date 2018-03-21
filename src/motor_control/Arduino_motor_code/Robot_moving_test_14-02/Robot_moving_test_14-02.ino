@@ -45,16 +45,16 @@ ros::NodeHandle nh;  //enables Arduino to be used as a ros node
 //ros::Subscriber<geometry_msgs::Twist> subscriber("turtle1/cmd_vel", &twistMessageCb);  //use this to drive the rover from the turtlesim console
 //^^
 
-linx = map(msg.linear.x, 0, 2, 0, 255)
-liny = map(msg.linear.y, 0, 2, 0, 255)
-angz = map(msg.angular.z, 0, 2, 0, 255)
-
 void TwistmessageCb(const geometry_msgs::Twist & msg){     // Cb (Callback) checks too see if messages are posted
-  
+
+  //float linx = map(msg.linear.x, 0, 10, 0, 255);
+  //float liny = map(msg.linear.y, 0, 10, 0, 255);
+  //float angz = map(msg.angular.z, 0, 10, 0, 255);
+
   FLSpeed = abs((1/tireRad) * (linx - liny - (distanceWidth + distanceLength) * angz));
-  FRSpeed = abs(-1*((1/tireRad) * (linx + liny + (distanceWidth + distanceLength) * angz)));
+  FRSpeed = abs(((1/tireRad) * (linx + liny + (distanceWidth + distanceLength) * angz)));
   RLSpeed = abs((1/tireRad) * (linx + liny - (distanceWidth + distanceLength) * angz));
-  RRSpeed = abs(-1*((1/tireRad) * (linx - liny + (distanceWidth + distanceLength) * angz)));
+  RRSpeed = abs(((1/tireRad) * (linx - liny + (distanceWidth + distanceLength) * angz)));
 
   //FLSpeed = map(FLSpeed, 0, 1024, 0, 255);
   //FRSpeed = map(FRSpeed, 0, 1024, 0, 255);
@@ -68,8 +68,8 @@ void TwistmessageCb(const geometry_msgs::Twist & msg){     // Cb (Callback) chec
   
   myMotor->run(FORWARD);
   myMotor2->run(FORWARD);
-  myMotor3->run(FORWARD);
-  myMotor4->run(FORWARD);
+  myMotor3->run(BACKWARD);
+  myMotor4->run(BACKWARD);
   delay(2000);
   
   // turn on motor
