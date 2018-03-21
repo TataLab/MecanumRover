@@ -1,3 +1,3 @@
 #!/bin/sh
 
-rostopic echo /cmd_vel_mux/input/teleop
+rostopic echo /cmd_vel
