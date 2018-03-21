@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/face_detect.dir/src/main.cpp.o"
-  "/home/liamm/MecanumRover/devel/lib/face_detect/face_detect.pdb"
-  "/home/liamm/MecanumRover/devel/lib/face_detect/face_detect"
+  "/home/coltan/IntroRobotics/MecanumRover/devel/lib/face_detect/face_detect.pdb"
+  "/home/coltan/IntroRobotics/MecanumRover/devel/lib/face_detect/face_detect"
 )
 
 # Per-language clean rules from dependency scanning.

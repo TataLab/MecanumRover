@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/liamm/MecanumRover/src/face_detect/src/main.cpp
+/home/coltan/IntroRobotics/MecanumRover/src/face_detect/src/main.cpp
 ros/ros.h
 -
 cv_bridge/cv_bridge.h
@@ -16,11 +16,11 @@ std_msgs/Int16.h
 std_msgs/Int16MultiArray.h
 -
 opencv2/objdetect.hpp
-/home/liamm/MecanumRover/src/face_detect/src/opencv2/objdetect.hpp
+/home/coltan/IntroRobotics/MecanumRover/src/face_detect/src/opencv2/objdetect.hpp
 opencv2/highgui.hpp
-/home/liamm/MecanumRover/src/face_detect/src/opencv2/highgui.hpp
+/home/coltan/IntroRobotics/MecanumRover/src/face_detect/src/opencv2/highgui.hpp
 opencv2/imgproc.hpp
-/home/liamm/MecanumRover/src/face_detect/src/opencv2/imgproc.hpp
+/home/coltan/IntroRobotics/MecanumRover/src/face_detect/src/opencv2/imgproc.hpp
 stdio.h
 -
 

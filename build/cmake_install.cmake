@@ -1,8 +1,8 @@
-# Install script for directory: /home/liamm/MecanumRover/src
+# Install script for directory: /home/coltan/IntroRobotics/MecanumRover/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/liamm/MecanumRover/install")
+  set(CMAKE_INSTALL_PREFIX "/home/coltan/IntroRobotics/MecanumRover/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -44,84 +44,85 @@ endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/liamm/MecanumRover/install/_setup_util.py")
+   "/home/coltan/IntroRobotics/MecanumRover/install/_setup_util.py")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/liamm/MecanumRover/install" TYPE PROGRAM FILES "/home/liamm/MecanumRover/build/catkin_generated/installspace/_setup_util.py")
+file(INSTALL DESTINATION "/home/coltan/IntroRobotics/MecanumRover/install" TYPE PROGRAM FILES "/home/coltan/IntroRobotics/MecanumRover/build/catkin_generated/installspace/_setup_util.py")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/liamm/MecanumRover/install/env.sh")
+   "/home/coltan/IntroRobotics/MecanumRover/install/env.sh")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/liamm/MecanumRover/install" TYPE PROGRAM FILES "/home/liamm/MecanumRover/build/catkin_generated/installspace/env.sh")
+file(INSTALL DESTINATION "/home/coltan/IntroRobotics/MecanumRover/install" TYPE PROGRAM FILES "/home/coltan/IntroRobotics/MecanumRover/build/catkin_generated/installspace/env.sh")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/liamm/MecanumRover/install/setup.bash")
+   "/home/coltan/IntroRobotics/MecanumRover/install/setup.bash")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/liamm/MecanumRover/install" TYPE FILE FILES "/home/liamm/MecanumRover/build/catkin_generated/installspace/setup.bash")
+file(INSTALL DESTINATION "/home/coltan/IntroRobotics/MecanumRover/install" TYPE FILE FILES "/home/coltan/IntroRobotics/MecanumRover/build/catkin_generated/installspace/setup.bash")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/liamm/MecanumRover/install/setup.sh")
+   "/home/coltan/IntroRobotics/MecanumRover/install/setup.sh")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/liamm/MecanumRover/install" TYPE FILE FILES "/home/liamm/MecanumRover/build/catkin_generated/installspace/setup.sh")
+file(INSTALL DESTINATION "/home/coltan/IntroRobotics/MecanumRover/install" TYPE FILE FILES "/home/coltan/IntroRobotics/MecanumRover/build/catkin_generated/installspace/setup.sh")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/liamm/MecanumRover/install/setup.zsh")
+   "/home/coltan/IntroRobotics/MecanumRover/install/setup.zsh")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/liamm/MecanumRover/install" TYPE FILE FILES "/home/liamm/MecanumRover/build/catkin_generated/installspace/setup.zsh")
+file(INSTALL DESTINATION "/home/coltan/IntroRobotics/MecanumRover/install" TYPE FILE FILES "/home/coltan/IntroRobotics/MecanumRover/build/catkin_generated/installspace/setup.zsh")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/liamm/MecanumRover/install/.rosinstall")
+   "/home/coltan/IntroRobotics/MecanumRover/install/.rosinstall")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/liamm/MecanumRover/install" TYPE FILE FILES "/home/liamm/MecanumRover/build/catkin_generated/installspace/.rosinstall")
+file(INSTALL DESTINATION "/home/coltan/IntroRobotics/MecanumRover/install" TYPE FILE FILES "/home/coltan/IntroRobotics/MecanumRover/build/catkin_generated/installspace/.rosinstall")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/liamm/MecanumRover/build/gtest/cmake_install.cmake")
-  include("/home/liamm/MecanumRover/build/mecanum_master/cmake_install.cmake")
-  include("/home/liamm/MecanumRover/build/motor_control/cmake_install.cmake")
-  include("/home/liamm/MecanumRover/build/teleop_control/cmake_install.cmake")
-  include("/home/liamm/MecanumRover/build/example/cmake_install.cmake")
-  include("/home/liamm/MecanumRover/build/face_detect/cmake_install.cmake")
+  include("/home/coltan/IntroRobotics/MecanumRover/build/gtest/cmake_install.cmake")
+  include("/home/coltan/IntroRobotics/MecanumRover/build/mecanum_master/cmake_install.cmake")
+  include("/home/coltan/IntroRobotics/MecanumRover/build/motor_control/cmake_install.cmake")
+  include("/home/coltan/IntroRobotics/MecanumRover/build/teleop_control/cmake_install.cmake")
+  include("/home/coltan/IntroRobotics/MecanumRover/build/example/cmake_install.cmake")
+  include("/home/coltan/IntroRobotics/MecanumRover/build/face_detect/cmake_install.cmake")
+  include("/home/coltan/IntroRobotics/MecanumRover/build/pixy/cmake_install.cmake")
 
 endif()
 
@@ -133,5 +134,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/liamm/MecanumRover/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/coltan/IntroRobotics/MecanumRover/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

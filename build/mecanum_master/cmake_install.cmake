@@ -1,8 +1,8 @@
-# Install script for directory: /home/liamm/MecanumRover/src/mecanum_master
+# Install script for directory: /home/coltan/IntroRobotics/MecanumRover/src/mecanum_master
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/liamm/MecanumRover/install")
+  set(CMAKE_INSTALL_PREFIX "/home/coltan/IntroRobotics/MecanumRover/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -33,17 +33,17 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/liamm/MecanumRover/build/mecanum_master/catkin_generated/installspace/mecanum_master.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/coltan/IntroRobotics/MecanumRover/build/mecanum_master/catkin_generated/installspace/mecanum_master.pc")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/mecanum_master/cmake" TYPE FILE FILES
-    "/home/liamm/MecanumRover/build/mecanum_master/catkin_generated/installspace/mecanum_masterConfig.cmake"
-    "/home/liamm/MecanumRover/build/mecanum_master/catkin_generated/installspace/mecanum_masterConfig-version.cmake"
+    "/home/coltan/IntroRobotics/MecanumRover/build/mecanum_master/catkin_generated/installspace/mecanum_masterConfig.cmake"
+    "/home/coltan/IntroRobotics/MecanumRover/build/mecanum_master/catkin_generated/installspace/mecanum_masterConfig-version.cmake"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/mecanum_master" TYPE FILE FILES "/home/liamm/MecanumRover/src/mecanum_master/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/mecanum_master" TYPE FILE FILES "/home/coltan/IntroRobotics/MecanumRover/src/mecanum_master/package.xml")
 endif()
 

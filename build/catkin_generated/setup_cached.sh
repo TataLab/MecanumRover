@@ -7,4 +7,7 @@
 # new environment variables
 
 # modified environment variables
-export PWD="/home/liamm/MecanumRover/build"
+export CMAKE_PREFIX_PATH="/home/coltan/IntroRobotics/MecanumRover/devel:$CMAKE_PREFIX_PATH"
+export PWD="/home/coltan/IntroRobotics/MecanumRover/build"
+export ROSLISP_PACKAGE_DIRECTORIES="/home/coltan/IntroRobotics/MecanumRover/devel/share/common-lisp"
+export ROS_PACKAGE_PATH="/home/coltan/IntroRobotics/MecanumRover/src:$ROS_PACKAGE_PATH"

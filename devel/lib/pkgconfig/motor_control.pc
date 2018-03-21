@@ -1,8 +1,8 @@
-prefix=/home/liamm/MecanumRover/devel
+prefix=/home/coltan/IntroRobotics/MecanumRover/devel
 
 Name: motor_control
 Description: Description of motor_control
 Version: 0.0.0
 Cflags: 
-Libs: -L/home/liamm/MecanumRover/devel/lib 
+Libs: -L/home/coltan/IntroRobotics/MecanumRover/devel/lib 
 Requires: 

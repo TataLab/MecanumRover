@@ -165,12 +165,12 @@ int main(int argc, char *argv[])
     }
   }
 
-  ros::Rate rate(10);
+  ros::Rate rate(30);
   ros::NodeHandle node;
 
   // twist message publisher
   ros::NodeHandle movement; 
-  ros::Publisher pub = movement.advertise<geometry_msgs::Twist>("/cmd_vel", 100);
+  ros::Publisher pub = movement.advertise<geometry_msgs::Twist>("/cmd_vel", 50);
 
   //ros::Subscriber sub = node.subscribe(turtle_name+"/pose", 10, &poseCallback);
 
@@ -246,12 +246,12 @@ int main(int argc, char *argv[])
     transformStamped.transform.rotation.z = q.z();
     transformStamped.transform.rotation.w = q.w();
 
-    double vectorMag = cos(angle_tilt);
+    double vectorMag = sin(angle_tilt);
     double move_x = vectorMag*cos(angle_pan);
     double move_y = vectorMag*sin(angle_pan);
 
-    moveMsg.linear.x = move_x;
-    moveMsg.linear.y = move_y;
+    moveMsg.linear.x = 50*move_x;
+    moveMsg.linear.y = 50*move_y;
     // publish the twist msg
     pub.publish(moveMsg);
     // publish the transform msg

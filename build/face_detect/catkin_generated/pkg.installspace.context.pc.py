@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "".split(';') if "" != "" else []
 PROJECT_CATKIN_DEPENDS = "".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "".split(';') if "" != "" else []
 PROJECT_NAME = "face_detect"
-PROJECT_SPACE_DIR = "/home/liamm/MecanumRover/install"
+PROJECT_SPACE_DIR = "/home/coltan/IntroRobotics/MecanumRover/install"
 PROJECT_VERSION = "0.0.0"

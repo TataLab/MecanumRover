@@ -1,8 +1,8 @@
-# Install script for directory: /home/liamm/MecanumRover/src/face_detect
+# Install script for directory: /home/coltan/IntroRobotics/MecanumRover/src/face_detect
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/liamm/MecanumRover/install")
+  set(CMAKE_INSTALL_PREFIX "/home/coltan/IntroRobotics/MecanumRover/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -33,17 +33,17 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/liamm/MecanumRover/build/face_detect/catkin_generated/installspace/face_detect.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/coltan/IntroRobotics/MecanumRover/build/face_detect/catkin_generated/installspace/face_detect.pc")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/face_detect/cmake" TYPE FILE FILES
-    "/home/liamm/MecanumRover/build/face_detect/catkin_generated/installspace/face_detectConfig.cmake"
-    "/home/liamm/MecanumRover/build/face_detect/catkin_generated/installspace/face_detectConfig-version.cmake"
+    "/home/coltan/IntroRobotics/MecanumRover/build/face_detect/catkin_generated/installspace/face_detectConfig.cmake"
+    "/home/coltan/IntroRobotics/MecanumRover/build/face_detect/catkin_generated/installspace/face_detectConfig-version.cmake"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/face_detect" TYPE FILE FILES "/home/liamm/MecanumRover/src/face_detect/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/face_detect" TYPE FILE FILES "/home/coltan/IntroRobotics/MecanumRover/src/face_detect/package.xml")
 endif()
 
