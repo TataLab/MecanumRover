@@ -148,8 +148,9 @@ int main(int argc, char *argv[])
     return pixy_init_status;
   }
 
-  ros::init(argc, argv, "pixy_twist");
 /*
+  ros::init(argc, argv, "my_tf2_broadcaster");
+
   ros::NodeHandle private_node("~");
 
   if (!private_node.hasParam("turtle"))
@@ -164,13 +165,17 @@ int main(int argc, char *argv[])
       private_node.getParam("turtle", turtle_name);
     }
   }
-*/
+  */
+  ros::init(argc, argv, "movement");
+
   ros::Rate rate(30);
-  ros::NodeHandle node;
+  //ros::NodeHandle node;
 
   // twist message publisher
   ros::NodeHandle movement; 
   ros::Publisher pub = movement.advertise<geometry_msgs::Twist>("/cmd_vel", 50);
+
+
 
   //ros::Subscriber sub = node.subscribe(turtle_name+"/pose", 10, &poseCallback);
 

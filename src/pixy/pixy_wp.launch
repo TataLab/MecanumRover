@@ -1,5 +1,5 @@
 <launch>
-	<!-- Pixy waypoint broadcaster-->
+	<!-- Pixy twist publisher-->
 	<node pkg="pixy" type="pixy_node" name="pixy_node" />
 
 </launch>

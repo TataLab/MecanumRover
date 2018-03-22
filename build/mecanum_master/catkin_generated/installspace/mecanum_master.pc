@@ -1,8 +1,0 @@
-prefix=/home/coltan/IntroRobotics/MecanumRover/install
-
-Name: mecanum_master
-Description: Description of mecanum_master
-Version: 0.0.0
-Cflags: 
-Libs: -L/home/coltan/IntroRobotics/MecanumRover/install/lib 
-Requires: 

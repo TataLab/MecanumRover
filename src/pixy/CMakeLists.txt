@@ -196,7 +196,8 @@ target_link_libraries(${PROJECT_NAME}_node
 
 ## Mark other files for installation (e.g. launch and bag files, etc.)
 install(FILES
-  start.launch
+  pixy_wp.launch
+  start_turtle.launch
 #   # myfile1
 #   # myfile2
   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}

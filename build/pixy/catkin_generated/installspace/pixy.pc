@@ -1,8 +1,0 @@
-prefix=/home/coltan/IntroRobotics/MecanumRover/install
-
-Name: pixy
-Description: Description of pixy
-Version: 0.0.0
-Cflags: -I/home/coltan/IntroRobotics/MecanumRover/install/include
-Libs: -L/home/coltan/IntroRobotics/MecanumRover/install/lib -lpixyusb
-Requires: 
