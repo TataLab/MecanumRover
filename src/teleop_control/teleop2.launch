@@ -1,0 +1,5 @@
+<launch>
+
+<node name="cmd_vel_output" pkg="teleop_control" type="init_2.sh" launch-prefix="xterm -e" />
+
+</launch>
