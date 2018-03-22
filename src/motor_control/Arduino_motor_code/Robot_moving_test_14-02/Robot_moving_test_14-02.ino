@@ -3,12 +3,12 @@
 // rostopic pub /cmd_vel geometry_msgs/Twist '{linear:{ x: y: z:}}'
 // rosrun rosserial_python serial_node.py /"serial_port"   :: this is a terminal command to get ros talking to this rose node
 
-
 #include <Wire.h>
 #include <Adafruit_MotorShield.h>
 #include "utility/Adafruit_MS_PWMServoDriver.h"
 #include <ros.h>  
 #include <std_msgs/Empty.h>
+#include <std_msgs/Float32.h>
 // #include <geometry_msg.h> 
 #include <geometry_msgs/Twist.h>
 #include <geometry_msgs/Vector3.h>
@@ -40,37 +40,75 @@ float FRSpeed = 0;
 
 ros::NodeHandle nh;  //enables Arduino to be used as a ros node
 
-
+std_msgs::Float32 flt_msg;
+ros::Publisher debug("debug", &flt_msg);
 
 //ros::Subscriber<geometry_msgs::Twist> subscriber("turtle1/cmd_vel", &twistMessageCb);  //use this to drive the rover from the turtlesim console
 //^^
 
 void TwistmessageCb(const geometry_msgs::Twist & msg){     // Cb (Callback) checks too see if messages are posted
 
-  //float linx = map(msg.linear.x, 0, 10, 0, 255);
-  //float liny = map(msg.linear.y, 0, 10, 0, 255);
-  //float angz = map(msg.angular.z, 0, 10, 0, 255);
+  float linx = msg.linear.x;
+  float liny = msg.linear.y;
+  float angz = msg.angular.z;
 
-  FLSpeed = abs((1/tireRad) * (linx - liny - (distanceWidth + distanceLength) * angz));
-  FRSpeed = abs(((1/tireRad) * (linx + liny + (distanceWidth + distanceLength) * angz)));
-  RLSpeed = abs((1/tireRad) * (linx + liny - (distanceWidth + distanceLength) * angz));
-  RRSpeed = abs(((1/tireRad) * (linx - liny + (distanceWidth + distanceLength) * angz)));
+  FLSpeed = ((1/tireRad) * (linx - liny - (distanceWidth + distanceLength) * angz));
+  FRSpeed = ((1/tireRad) * (linx + liny + (distanceWidth + distanceLength) * angz));
+  RLSpeed = ((1/tireRad) * (linx + liny - (distanceWidth + distanceLength) * angz));
+  RRSpeed = ((1/tireRad) * (linx - liny + (distanceWidth + distanceLength) * angz));
 
+
+
+/*
+  Serial.println(FLSpeed,DEC);
+  Serial.println("\n");
+  Serial.println(FRSpeed,DEC);
+  Serial.println("\n");
+  Serial.println(RLSpeed,DEC);
+  Serial.println("\n");
+  Serial.println(RRSpeed,DEC);
+  Serial.println("\n");
+  */
   //FLSpeed = map(FLSpeed, 0, 1024, 0, 255);
   //FRSpeed = map(FRSpeed, 0, 1024, 0, 255);
   //RLSpeed = map(RLSpeed, 0, 1024, 0, 255);
   //RRSpeed = map(RRSpeed, 0, 1024, 0, 255);
   
-  myMotor->setSpeed(FLSpeed);
-  myMotor2->setSpeed(FRSpeed);
-  myMotor3->setSpeed(RLSpeed);
-  myMotor4->setSpeed(RRSpeed);
+  myMotor->setSpeed(abs(FLSpeed));
+  myMotor2->setSpeed(abs(FRSpeed));
+  myMotor3->setSpeed(abs(RLSpeed));
+  myMotor4->setSpeed(abs(RRSpeed));
+
   
-  myMotor->run(FORWARD);
-  myMotor2->run(FORWARD);
-  myMotor3->run(BACKWARD);
-  myMotor4->run(BACKWARD);
-  delay(2000);
+  if(FLSpeed>=0.0){
+    myMotor->run(FORWARD);
+  }
+  else{
+    myMotor->run(BACKWARD); 
+  }
+  
+  if(FRSpeed>=0.0){
+    myMotor2->run(FORWARD);
+  }
+  else{
+    myMotor2->run(BACKWARD); 
+  }
+  
+  if(RLSpeed>=0.0){
+    myMotor3->run(FORWARD);
+  }
+  else{
+    myMotor3->run(BACKWARD); 
+  }
+  
+  if(RRSpeed>=0.0){
+    myMotor4->run(FORWARD);
+  }
+  else{
+    myMotor4->run(BACKWARD); 
+  }
+
+  delay(500);
   
   // turn on motor
   myMotor->run(RELEASE);
@@ -88,7 +126,7 @@ ros::Subscriber<geometry_msgs::Twist> sub("cmd_vel", &TwistmessageCb);
 
 void setup() 
 {
-//  Serial.begin(9600); 
+  Serial.begin(9600); 
 
     //let the motors spin a bit in case they were controlled alread
     
@@ -137,7 +175,20 @@ void loop()
     //Serial.println(RLSpeed);
     //Serial.println(RRSpeed);
     //Serial.println(" ");
+  //flt_msg = FLSpeed;  
+  char message[5] = "hello";
+  flt_msg = message;
+  debug.publish( &flt_msg );
 
+  //flt_msg = FRSpeed;  
+  debug.publish( &flt_msg );
+
+  //flt_msg = RLSpeed;  
+  debug.publish( &flt_msg );
+
+  //flt_msg = RRSpeed;  
+  debug.publish( &flt_msg );
+  
   nh.spinOnce();      // Run all the nh (Node Handle) code once
   delay(1);           //For Serial.print to work
 
