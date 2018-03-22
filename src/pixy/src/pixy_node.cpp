@@ -148,8 +148,8 @@ int main(int argc, char *argv[])
     return pixy_init_status;
   }
 
-  ros::init(argc, argv, "my_tf2_broadcaster");
-
+  ros::init(argc, argv, "pixy_twist");
+/*
   ros::NodeHandle private_node("~");
 
   if (!private_node.hasParam("turtle"))
@@ -164,7 +164,7 @@ int main(int argc, char *argv[])
       private_node.getParam("turtle", turtle_name);
     }
   }
-
+*/
   ros::Rate rate(30);
   ros::NodeHandle node;
 

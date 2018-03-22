@@ -1,0 +1,5 @@
+<launch>
+	<!-- Pixy waypoint broadcaster-->
+	<node pkg="pixy" type="pixy_node" name="pixy_node" />
+
+</launch>
