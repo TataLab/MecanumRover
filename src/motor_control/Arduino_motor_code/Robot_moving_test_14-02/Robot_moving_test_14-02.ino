@@ -40,9 +40,6 @@ float FRSpeed = 0;
 
 ros::NodeHandle nh;  //enables Arduino to be used as a ros node
 
-std_msgs::Float32 flt_msg;
-ros::Publisher debug("debug", &flt_msg);
-
 //ros::Subscriber<geometry_msgs::Twist> subscriber("turtle1/cmd_vel", &twistMessageCb);  //use this to drive the rover from the turtlesim console
 //^^
 
@@ -57,27 +54,15 @@ void TwistmessageCb(const geometry_msgs::Twist & msg){     // Cb (Callback) chec
   RLSpeed = ((1/tireRad) * (linx + liny - (distanceWidth + distanceLength) * angz));
   RRSpeed = ((1/tireRad) * (linx - liny + (distanceWidth + distanceLength) * angz));
 
-
-
-/*
-  Serial.println(FLSpeed,DEC);
-  Serial.println("\n");
-  Serial.println(FRSpeed,DEC);
-  Serial.println("\n");
-  Serial.println(RLSpeed,DEC);
-  Serial.println("\n");
-  Serial.println(RRSpeed,DEC);
-  Serial.println("\n");
-  */
   //FLSpeed = map(FLSpeed, 0, 1024, 0, 255);
   //FRSpeed = map(FRSpeed, 0, 1024, 0, 255);
   //RLSpeed = map(RLSpeed, 0, 1024, 0, 255);
   //RRSpeed = map(RRSpeed, 0, 1024, 0, 255);
   
-  myMotor->setSpeed(abs(FLSpeed));
-  myMotor2->setSpeed(abs(FRSpeed));
-  myMotor3->setSpeed(abs(RLSpeed));
-  myMotor4->setSpeed(abs(RRSpeed));
+  myMotor->setSpeed(map(abs(FLSpeed), 0, 5, 0, 255));
+  myMotor2->setSpeed(map(abs(FRSpeed), 0, 5, 0, 255));
+  myMotor3->setSpeed(map(abs(RLSpeed), 0, 5, 0, 255));
+  myMotor4->setSpeed(map(abs(RRSpeed), 0, 5, 0, 255));
 
   
   if(FLSpeed>=0.0){
@@ -175,19 +160,6 @@ void loop()
     //Serial.println(RLSpeed);
     //Serial.println(RRSpeed);
     //Serial.println(" ");
-  //flt_msg = FLSpeed;  
-  char message[5] = "hello";
-  flt_msg = message;
-  debug.publish( &flt_msg );
-
-  //flt_msg = FRSpeed;  
-  debug.publish( &flt_msg );
-
-  //flt_msg = RLSpeed;  
-  debug.publish( &flt_msg );
-
-  //flt_msg = RRSpeed;  
-  debug.publish( &flt_msg );
   
   nh.spinOnce();      // Run all the nh (Node Handle) code once
   delay(1);           //For Serial.print to work
