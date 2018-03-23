@@ -1,0 +1,8 @@
+prefix=/home/liamm/MecanumRover/install
+
+Name: pixy
+Description: Description of pixy
+Version: 0.0.0
+Cflags: -I/home/liamm/MecanumRover/install/include
+Libs: -L/home/liamm/MecanumRover/install/lib -lpixyusb
+Requires: 

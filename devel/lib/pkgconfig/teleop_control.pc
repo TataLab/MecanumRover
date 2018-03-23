@@ -1,0 +1,8 @@
+prefix=/home/liamm/MecanumRover/devel
+
+Name: teleop_control
+Description: Description of teleop_control
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/liamm/MecanumRover/devel/lib 
+Requires: 

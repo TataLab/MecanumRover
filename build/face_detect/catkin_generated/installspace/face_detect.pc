@@ -1,0 +1,8 @@
+prefix=/home/liamm/MecanumRover/install
+
+Name: face_detect
+Description: Description of face_detect
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/liamm/MecanumRover/install/lib 
+Requires: 

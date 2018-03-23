@@ -1,0 +1,1 @@
+/usr/bin/c++  -fPIC   -shared -Wl,-soname,libpixyusb.so -o libpixyusb.so CMakeFiles/pixyusb.dir/src/chirpreceiver.cpp.o CMakeFiles/pixyusb.dir/src/pixyinterpreter.cpp.o CMakeFiles/pixyusb.dir/src/pixy.cpp.o CMakeFiles/pixyusb.dir/src/usblink.cpp.o CMakeFiles/pixyusb.dir/src/utils/timer.cpp.o CMakeFiles/pixyusb.dir/common/chirp.cpp.o 
