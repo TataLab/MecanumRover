@@ -1,8 +1,0 @@
-prefix=/home/liamm/MecanumRover/install
-
-Name: mecanum_master
-Description: Description of mecanum_master
-Version: 0.0.0
-Cflags: 
-Libs: -L/home/liamm/MecanumRover/install/lib 
-Requires: 

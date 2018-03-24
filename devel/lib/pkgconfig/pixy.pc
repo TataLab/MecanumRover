@@ -1,8 +1,0 @@
-prefix=/home/liamm/MecanumRover/devel
-
-Name: pixy
-Description: Description of pixy
-Version: 0.0.0
-Cflags: -I/home/liamm/MecanumRover/src/pixy/libpixyusb/include -I/home/liamm/MecanumRover/src/pixy/libpixyusb/common
-Libs: -L/home/liamm/MecanumRover/devel/lib -lpixyusb
-Requires: 

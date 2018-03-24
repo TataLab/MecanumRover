@@ -148,11 +148,11 @@ int main(int argc, char *argv[])
     return pixy_init_status;
   }
 
-/*
+
   ros::init(argc, argv, "my_tf2_broadcaster");
 
   ros::NodeHandle private_node("~");
-
+/*
   if (!private_node.hasParam("turtle"))
   {
     if (argc != 2)
@@ -234,11 +234,11 @@ int main(int argc, char *argv[])
     double angle_tilt = RCStoRadiens(tilt);
     double angle_pan = RCStoRadiens(pan);
 
-    //static tf2_ros::TransformBroadcaster br;
-    //geometry_msgs::TransformStamped transformStamped;
+    static tf2_ros::TransformBroadcaster br;
+    geometry_msgs::TransformStamped transformStamped;
     geometry_msgs::Twist moveMsg;
 
-    /*
+    
     transformStamped.header.stamp = ros::Time::now();
     transformStamped.header.frame_id = "world";
     transformStamped.child_frame_id = "pixy_node";
@@ -251,17 +251,17 @@ int main(int argc, char *argv[])
     transformStamped.transform.rotation.y = q.y();
     transformStamped.transform.rotation.z = q.z();
     transformStamped.transform.rotation.w = q.w();
-    */
+    
     double vectorMag = sin(angle_tilt);
     double move_x = vectorMag*cos(angle_pan);
     double move_y = vectorMag*sin(angle_pan);
 
-    moveMsg.linear.x = 50*move_x;
-    moveMsg.linear.y = 50*move_y;
+    moveMsg.linear.x = 3*move_x;
+    moveMsg.linear.y = 3*move_y;
     // publish the twist msg
     pub.publish(moveMsg);
     // publish the transform msg
-    //br.sendTransform(transformStamped);
+    br.sendTransform(transformStamped);
 
     rate.sleep();
 

@@ -1,8 +1,0 @@
-prefix=/home/liamm/MecanumRover/devel
-
-Name: example
-Description: Description of example
-Version: 0.0.0
-Cflags: 
-Libs: -L/home/liamm/MecanumRover/devel/lib 
-Requires: 
