@@ -1,7 +1,5 @@
 <launch>
 
-<node name="wireless_connector" pkg="teleop_control" type="init_0.sh" launch-prefix="xterm -e" />
-
 <node name="teleop_input" pkg="teleop_control" type="init_1.sh" launch-prefix="xterm -e" />
 
 <node name="teleop_output" pkg="teleop_control" type="init_2.sh" launch-prefix="xterm -e" />
