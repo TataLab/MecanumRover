@@ -1,8 +1,0 @@
-prefix=/home/coltan/IntroRobotics/MecanumRover/devel
-
-Name: teleop_control
-Description: Description of teleop_control
-Version: 0.0.0
-Cflags: 
-Libs: -L/home/coltan/IntroRobotics/MecanumRover/devel/lib 
-Requires: 

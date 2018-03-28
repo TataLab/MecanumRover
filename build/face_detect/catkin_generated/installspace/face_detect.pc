@@ -1,8 +1,0 @@
-prefix=/home/coltan/IntroRobotics/MecanumRover/install
-
-Name: face_detect
-Description: Description of face_detect
-Version: 0.0.0
-Cflags: 
-Libs: -L/home/coltan/IntroRobotics/MecanumRover/install/lib 
-Requires: 
