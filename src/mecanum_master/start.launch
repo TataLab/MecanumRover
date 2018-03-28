@@ -2,8 +2,6 @@
 
 	<include file="$(find motor_control)/motor_control.launch" />
 
-	<include file="$(find teleop_control)/teleop.launch" />
-
 	<!-- <include file="$(find pixy)/pixy_wp.launch" /> -->
 	
 </launch>
