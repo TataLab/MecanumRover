@@ -1,0 +1,2 @@
+example:face_detect:mecanum_master:motor_control:pixy:teleop_control
+-DCATKIN_DEVEL_PREFIX=/home/coltan/IntroRobotics/MecanumRover/devel -DCMAKE_INSTALL_PREFIX=/home/coltan/IntroRobotics/MecanumRover/install -G Unix Makefiles
