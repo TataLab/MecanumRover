@@ -18,8 +18,8 @@
 
 #define BLOCK_BUFFER_SIZE 25
 
-#define PIXY_X_CENTER ((PIXY_MAX_X - PIXY_MIN_X) / 2)
-#define PIXY_Y_CENTER ((PIXY_MAX_Y - PIXY_MIN_Y) / 2)
+#define PIXY_X_CENTER ((PIXY_MAX_X - PIXY_MIN_X) / 2)+2
+#define PIXY_Y_CENTER ((PIXY_MAX_Y - PIXY_MIN_Y) / 2)+2
 
 // offset of the camera relative to the "center" of the robot
 #define X_POS 0
