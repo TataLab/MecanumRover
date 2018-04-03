@@ -18,8 +18,8 @@
 
 #define BLOCK_BUFFER_SIZE 25
 
-#define PIXY_X_CENTER ((PIXY_MAX_X - PIXY_MIN_X) / 2)+2
-#define PIXY_Y_CENTER ((PIXY_MAX_Y - PIXY_MIN_Y) / 2)+2
+#define PIXY_X_CENTER ((PIXY_MAX_X - PIXY_MIN_X) / 2)
+#define PIXY_Y_CENTER ((PIXY_MAX_Y - PIXY_MIN_Y) / 2)
 
 // offset of the camera relative to the "center" of the robot
 #define X_POS 0
@@ -33,7 +33,7 @@
 #define PAN_DERIVATIVE_GAIN 150
 #define TILT_PROPORTIONAL_GAIN 400
 #define TILT_DERIVATIVE_GAIN 100
-
+  
 const double PI = acos(-1);
 
 // Pixy Block Buffer //
@@ -131,6 +131,7 @@ int main(int argc, char *argv[])
   fflush(stdout);
 
   initialize_gimbals();
+
 
   // Catch CTRL+C (SIGINT) signals //
   signal(SIGINT, handle_SIGINT);
@@ -231,8 +232,8 @@ int main(int argc, char *argv[])
     }
 
     // start
-    double angle_tilt = RCStoRadiens(tilt);
-    double angle_pan = RCStoRadiens(pan);
+    double angle_tilt = RCStoRadiens(tilt) + 0.0872665;
+    double angle_pan = RCStoRadiens(pan) + (0.0872665/2.0);
 
     static tf2_ros::TransformBroadcaster br;
     geometry_msgs::TransformStamped transformStamped;
@@ -256,8 +257,8 @@ int main(int argc, char *argv[])
     double move_x = vectorMag*cos(angle_pan);
     double move_y = vectorMag*sin(angle_pan);
 
-    moveMsg.linear.x = 3*move_x;
-    moveMsg.linear.y = 3*move_y;
+    moveMsg.linear.x = 1*move_x;
+    moveMsg.linear.y = 1*move_y;
     // publish the twist msg
     pub.publish(moveMsg);
     // publish the transform msg
